@@ -40,7 +40,9 @@ def solve_part_2(txt_input):
             case "Y":
                 all_turns.append((turn[0], mapping[turn[0]]))
             case "Z":
-                all_turns.append((turn[0], seq_pos[(seq_val[mapping[turn[0]]] + 1) % len(seq_pos)]))
+                all_turns.append(
+                    (turn[0], seq_pos[(seq_val[mapping[turn[0]]] + 1) % len(seq_pos)])
+                )
     return calculate_points(all_turns)
 
 
